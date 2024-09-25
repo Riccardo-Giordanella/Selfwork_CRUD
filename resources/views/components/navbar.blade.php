@@ -10,11 +10,11 @@
           <a class="nav-link" aria-current="page" href="{{route('home')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('articles')}}">I nostri articoli</a>
+          <a class="nav-link" href="{{route('articles.index')}}">I nostri articoli</a>
         </li>
         @auth
         <li class="nav-item">
-          <a class="nav-link" href="#">Crea articolo</a>
+          <a class="nav-link" href="{{route('articles.create')}}">Crea articolo</a>
         </li>
         @endauth
         <li class="nav-item dropdown">
@@ -26,7 +26,6 @@
             <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
             <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
             @endguest
-            <li><hr class="dropdown-divider"></li>
             @auth
             <li>
               <form class="dropdown-item btn logout" href="#" method="POST" action="{{route('logout')}}"> @csrf <button class="btn logout nav-link" type="submit">Esci</button></form>

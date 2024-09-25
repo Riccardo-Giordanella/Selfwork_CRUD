@@ -52,3 +52,9 @@
     color: red;
     width: 20%;
 }
+
+.storeform{
+    width: 50%;
+    background-color: var(--black);
+    color: white;
+}
