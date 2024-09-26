@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-12">
                 @foreach($articles as $article)
-                <x-card/>
+                <x-card :article="$article"/>
                 @endforeach
             </div>
         </div>

@@ -30,8 +30,12 @@ class ArticleController extends Controller
     */
     public function store(ArticleRequest $request)
     {
-        Article::create($request->all());
-        return redirect()->back()->with('status', 'Articolo creato con successo');
+        Article::create([
+            'title' => $request->title,
+            'body' => $request->body,
+            'author' => $request->author
+        ]);
+        return redirect()->back()->with('message', 'Articolo creato con successo');
     }
 
     /**
@@ -39,7 +43,7 @@ class ArticleController extends Controller
     */
     public function show(Article $article)
     {
-        //
+        return view('articles.detail', compact('article'));
     }
 
     /**

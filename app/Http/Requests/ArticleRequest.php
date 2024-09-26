@@ -23,7 +23,7 @@ class ArticleRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
-            'description' => 'required|string',
+            'body' => 'required|string',
             'author' => 'required|string'
         ];
     }

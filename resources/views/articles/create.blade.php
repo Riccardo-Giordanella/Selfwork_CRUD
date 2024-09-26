@@ -1,8 +1,8 @@
 <x-layout>
 
-    @if (session('status'))
+    @if (session('message'))
     <div class="alert alert-success">
-        {{ session('status') }}
+        {{ session('message') }}
     </div>
     @endif
 
