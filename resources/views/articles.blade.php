@@ -5,7 +5,7 @@
 
     <section class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 d-flex flex-wrap">
                 @foreach($articles as $article)
                 <x-card :article="$article"/>
                 @endforeach

@@ -58,3 +58,13 @@
     background-color: var(--black);
     color: white;
 }
+
+.card{
+    background-color: var(--black);
+    color: white;
+}
+
+.buttonwrapper{
+    display: flex;
+    justify-content: center;
+}
