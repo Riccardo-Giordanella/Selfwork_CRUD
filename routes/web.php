@@ -16,4 +16,9 @@ Route::post('/articles/create/success', [ArticleController::class, 'store'])->na
 Route::get('/articles/index', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articles/detail/{article}', [ArticleController::class, 'show'])->name('articles.detail');
 
-Route::get('/articles/edit', [ArticleController::class, 'edit'])->name('articles.edit')->middleware('auth');
+// Rotte U
+Route::get('/articles/edit/{article}', [ArticleController::class, 'edit'])->name('articles.edit')->middleware('auth');
+Route::put('/articles/update/{article}', [ArticleController::class, 'update'])->name('articles.update')->middleware('auth');
+
+// Rotta D
+Route::delete('/articles/destroy/{article}', [ArticleController::class, 'destroy'])->name('articles.destroy')->middleware('auth');
